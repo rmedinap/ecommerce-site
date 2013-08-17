@@ -11,4 +11,9 @@
  *= require_tree .
  *= require store/spree_social
  *= require store/spree_product_zoom
+ *= require css/anythingslider
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */

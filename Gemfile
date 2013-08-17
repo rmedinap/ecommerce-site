@@ -45,4 +45,4 @@ gem "spree_social", :git => "git://github.com/spree/spree_social.git", :branch =
 gem 'spree_contact_us', '~> 1.1.0'
 gem "spree_product_zoom", :git => "git://github.com/spree/spree_product_zoom.git", :branch => '1-3-stable'
 gem 'spree_wysiwyg', :git => 'https://github.com/fernandoaleman/spree_wysiwyg', :branch => '1-3-stable'
-
+gem 'spree_slider'
