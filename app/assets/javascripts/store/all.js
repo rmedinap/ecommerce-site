@@ -17,3 +17,4 @@
 //= require js/jquery.anythingslider.fx
 //= require js/jquery.anythingslider.video
 //= require jquery.nivo.slider.pack.js
+//= require store/spree_easy_contact
