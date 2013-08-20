@@ -9,7 +9,9 @@ set :user, "spree"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :use_sudo, false
 
-server "w3casts.com", :web, :app, :db, primary: true
+#server "w3casts.com", :web, :app, :db, primary: true
+server "yupiyap.cristiancastillo.com", :web, :app, :db, primary: true
+
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
