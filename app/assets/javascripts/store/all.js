@@ -13,8 +13,5 @@
 //= require_tree .
 //= require store/spree_social
 //= require store/spree_product_zoom
-//= require js/jquery.anythingslider
-//= require js/jquery.anythingslider.fx
-//= require js/jquery.anythingslider.video
-//= require jquery.nivo.slider.pack.js
+//= require store/jquery.bxslider.min
 //= require store/spree_easy_contact
