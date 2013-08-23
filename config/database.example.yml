@@ -39,4 +39,4 @@ production:
   pool: 5
   username: spreecommerce13
   password: tienda123
-  socket: var/run/mysqld/mysqld.sock
+  socket: /var/run/mysqld/mysqld.sock
