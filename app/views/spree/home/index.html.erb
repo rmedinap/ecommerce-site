@@ -1,14 +1,50 @@
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
-  </div>
-<% end %>
-
 <% content_for :slide do %>
     <%= render :partial => 'spree/shared/slider' %>
 <% end %>
 
+<div data-hook="homepage_categories" class="container row">
+  <% if @first_taxonomy.present? %>
+    <% all_taxons   = @first_taxonomy.taxons - [@first_taxonomy.taxons.root]
+      first_taxon   = all_taxons.first
+      last_taxon    = all_taxons.last
+    %>
+    <% all_taxons.each_slice(3) do |taxon_group| %>
+      <% taxon_group.each do |taxon|
+        if first_taxon    == taxon
+          position = "alpha"
+        elsif last_taxon  == taxon
+          position = "omega"
+        else
+          position = ""
+        end
+      %>
+        <div class="one-third column <%= position %>">
+          <h2><%= taxon.try(:name) %>       </h2>
+          <div class="home_category_description">
+            <%= taxon.try(:description) %>
+          </div>
+          <div class="home_category_products">
+            <% taxon.products.limit(3).each do |prod| %>
+              <div class="home_category_product">
+                <div>
+                  <%= link_to small_image(prod, :itemprop => "image"), prod %>
+                </div>
+                <%= link_to truncate(prod.name, :length => 30), prod, :class => 'info', :itemprop => "name", :title => prod.name %>
+              </div>
+            <% end%>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+<div data-hook="homepage_prominent_products">
+  <h2>Productos Destacados</h2>
+  <%= render :partial => 'spree/shared/products_group_4', :locals => { :products => @products } %>
+</div>
+
 <div data-hook="homepage_products">
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+  <%# <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %> %>
 </div>
 

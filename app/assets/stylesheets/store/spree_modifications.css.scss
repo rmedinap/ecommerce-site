@@ -1,0 +1,48 @@
+h2{
+  font-size: 18px;
+}
+div[data-hook="homepage_categories"]{
+  .pull-left{
+    display: block;
+    float: left;
+  }
+  .pull-right{
+    display: block;
+    float: right;
+  }
+  .home_category_icon{
+    width: 23%;
+    margin-right: 7%;
+    background-color: #999;
+  }
+  .home_category_description{
+    text-align: justify;
+  }
+  .home_category_products{
+    .home_category_product{
+      float: left;
+      width: 30%;
+      margin-right: 5%;
+      &:last-child{
+        margin: 0;
+      }
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+div[data-hook="homepage_products"]{
+  .product-image {
+    min-height: 110px;
+  }
+}
+#footer-pages{
+  ul{
+    li{
+      display: inline-block;
+      padding-left: 10px;
+    }
+  }
+}

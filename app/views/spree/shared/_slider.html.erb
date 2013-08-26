@@ -1,6 +1,6 @@
 <% if Spree::Slide.published.count > 0 %>
   <% Rails.logger.info "SLIDE SLIDE PUBLISHED"  %>
-  <div id="slider">
+  <div id="slider" class="columns sixteen">
     <ul class="bxslider">
       <% Spree::Slide.published.order('position ASC').each do |s| %>
         <li>
