@@ -13,4 +13,3 @@
 //= require_tree .
 //= require admin/spree_social
 //= require admin/spree_wysiwyg
-//= require admin/spree_easy_contact
