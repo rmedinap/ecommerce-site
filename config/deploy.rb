@@ -33,6 +33,7 @@ namespace :deploy do
   task :setup_config, roles: :app do
     run "mkdir -p #{shared_path}/config"
     run "mkdir -p #{shared_path}/uploads"
+    run "mkdir -p #{shared_path}/spree"
     put File.read("config/nginx.conf"), "#{shared_path}/config/nginx.conf"
     sudo "ln -nfs #{shared_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
@@ -49,6 +50,7 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
     run "ln -nfs #{shared_path}/presentaciones #{release_path}/presentaciones"
+    run "ln -nfs #{shared_path}/spree #{release_path}/public/spree"
   end
 
   desc "Make sure local git is in sync with remote."
