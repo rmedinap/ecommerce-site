@@ -1,7 +1,43 @@
+body{
+  background: #EDF0E5;
+}
 h2{
-  font-size: 18px;
+  font-size: 30px;
+  color: #009966;
+  font-family: 'Chewy', Arial, serif;;
+  margin: 20px 0;
+}
+
+/* Home */
+#slider{
+  padding: 0;
+  #slider_container{
+    background: #FFF;
+    margin: 10px;
+    padding: 0;
+  }
+}
+
+nav#collection-nav{
+  ul#main-nav-bar{
+    background: #8CBC00;
+    padding-top: 7px;
+    margin: 0;
+    li a{
+      color: #FFFFFF;
+      padding: 10px;
+      font-family: 'Chewy', Arial, serif;
+    }
+  }
 }
 div[data-hook="homepage_categories"]{
+  h2{
+    font-size: 17px;
+    background: #009966;
+    color: #FFFFFF;
+    padding: 0 10px;
+    margin: 0;
+  }
   .pull-left{
     display: block;
     float: left;
@@ -13,6 +49,7 @@ div[data-hook="homepage_categories"]{
   .home_category_icon{
     width: 100%;
     background-color: #999;
+    max-height: 140px;
   }
   .home_category_description{
     text-align: justify;
@@ -44,4 +81,12 @@ div[data-hook="homepage_products"]{
       padding-left: 10px;
     }
   }
+}
+
+/** Editando tema de carrusel
+=============================*/
+
+.bx-wrapper .bx-viewport {
+  left: -10px;
+  border: 10px #fff solid;
 }
