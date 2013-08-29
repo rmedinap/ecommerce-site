@@ -19,19 +19,12 @@
         end
       %>
         <div class="one-third column <%= position %>">
+          <div class="home_category_icon">
+            <%= link_to image_tag((taxon.icon.url(:taxon) if taxon.icon.present?)), seo_url(taxon) %>
+          </div>
           <h2><%= taxon.try(:name) %>       </h2>
           <div class="home_category_description">
             <%= taxon.try(:description) %>
-          </div>
-          <div class="home_category_products">
-            <% taxon.products.limit(3).each do |prod| %>
-              <div class="home_category_product">
-                <div>
-                  <%= link_to small_image(prod, :itemprop => "image"), prod %>
-                </div>
-                <%= link_to truncate(prod.name, :length => 30), prod, :class => 'info', :itemprop => "name", :title => prod.name %>
-              </div>
-            <% end%>
           </div>
         </div>
       <% end %>
