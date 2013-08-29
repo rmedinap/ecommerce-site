@@ -20,7 +20,7 @@
       %>
         <div class="one-third column <%= position %>">
           <div class="home_category_icon">
-            <%= link_to image_tag((taxon.icon.url(:taxon) if taxon.icon.present?)), seo_url(taxon) %>
+            <%= link_to (taxon.icon.present? ? image_tag(taxon.icon.url(:taxon)) : nil) , seo_url(taxon) %>
           </div>
           <h2><%= taxon.try(:name) %>       </h2>
           <div class="home_category_description">
