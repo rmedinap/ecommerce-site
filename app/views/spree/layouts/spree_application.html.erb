@@ -14,6 +14,8 @@
 
       <%= render :partial => 'spree/shared/header' %>
 
+      <%= flash_messages %>
+
       <%= yield :slide %>
 
       <div id="wrapper" class="row" data-hook>
@@ -23,7 +25,6 @@
         <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
 
         <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve" %>" data-hook>
-          <%= flash_messages %>
           <%= yield %>
         </div>
 

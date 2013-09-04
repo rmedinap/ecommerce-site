@@ -11,6 +11,10 @@ module Spree
       def edit
         @contact_topic = Spree::ContactTopic.find(params[:id])
       end
+
+      def show
+        @contact_topic = Spree::ContactTopic.includes(:messages).find(params[:id])
+      end
 		end
 	end
 end

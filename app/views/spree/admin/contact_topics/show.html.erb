@@ -1,0 +1,32 @@
+
+<h1><%= "Mensajes de #{@contact_topic.name}" %></h1>
+
+<br/>
+
+<table class="index">
+  <thead>
+    <tr data-hook='admin_contact_topic_show_headers' class="even">
+      <th><%= t("name") %></th>
+      <th><%= t("email") %></th>
+      <th><%= t("message") %></th>
+      <th><%= t("order") %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @contact_topic.messages.each_with_index do |message, i| %>
+    <%#- locals = {:topic => topic} %>
+    <tr class="<%= "even" if i % 2 != 0 %>">
+      <td><%= message.name %></td>
+      <td><%= message.email %></td>
+      <td><%= message.message %></td>
+      <td><%= message.order_number %></td>
+      <td class="actions">
+        <%#= link_to "Show", admin_message_path(message) %>
+        <%# &nbsp; %>
+        <%= link_to_delete message  %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+

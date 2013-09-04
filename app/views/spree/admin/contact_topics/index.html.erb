@@ -1,0 +1,42 @@
+<div class='toolbar'>
+  <ul class='actions'>
+    <li id="new_contact_topic_link">
+			<p><%= button_link_to t(:new_contact_topic), new_object_url, :icon => 'add' %></p>
+    </li>
+  </ul>
+  <br/>
+</div>
+
+<h1><%= t("contact_topics")%></h1>
+<br/>
+
+<div id="new_contact_topic"></div>
+
+<table class="index">
+  <thead>
+    <tr data-hook='admin_contact_topic_index_headers'>
+      <th><%= t("name") %></th>
+      <th><%= t("emails") %></th>
+      <th data-hook='admin_contact_topic_index_header_actions'>
+      </th>
+    </tr>
+  </thead>
+  <% @contact_topics.each.each_with_index do |topic, i| %>
+    <%#- locals = {:topic => topic} %>
+    <tr id="<%= dom_id topic %>" data-hook="admin_contact_topics_index_rows" class="<%= "even" if i % 2 != 0 %>">
+      <td><%= topic.name %></td>
+      <td><%= topic.emails %></td>
+      <td class="actions" data-hook="admin_contact_topic_index_header_actions">
+        <%= link_to admin_contact_topic_path(topic), :class=>"icon-eye-open" do %>
+          <span class="text">Show</span>
+        <% end %>
+        &nbsp;
+        <%= link_to_edit topic  %>
+        &nbsp;
+        <%= link_to_delete topic  %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+
