@@ -58,11 +58,13 @@ header{
     }
   }
   #link-to-login{
-    a.icon-user{
+    a{
       color: #666;
-      background-image: url("/assets/user3.png");
-      background-repeat: no-repeat;
-      padding-left: 25px;
+      &.icon-user{
+        background-image: url("/assets/user3.png");
+        background-repeat: no-repeat;
+        padding-left: 25px;
+      }
     }
   }
   #search-bar{
