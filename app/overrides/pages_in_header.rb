@@ -1,3 +1,6 @@
-#Deface::Override.new(:virtual_path => "spree/shared/_nav_bar", :name => "pages_in_header",
-#:insert_top => "#nav-bar",
-#:partial => "spree/static_content/static_content_header", :disabled => false)
+Deface::Override.new(:virtual_path => "spree/shared/_main_nav_bar",
+                     :name => "contact_in_header",
+                     :insert_bottom => "#main-nav-bar",
+                     :text => "<li class='pull-right'><a href='/contact'>Contact</a></li>",
+                     :disabled => false
+)
