@@ -50,6 +50,4 @@ gem 'spree_wysiwyg', :git => 'https://github.com/fernandoaleman/spree_wysiwyg', 
 gem 'spree_slider'
 
 gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :branch => '1-3-stable'
-# gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us', :branch => '1-3-stable'
-# gem 'spree_easy_contact', :git => 'git://github.com/organicweb/spree-easy-contact.git', :branch => '1-3-stable'
 
