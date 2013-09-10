@@ -7,5 +7,5 @@
     <%= link_to t(:logout), spree.logout_path %>
   </li>
 <% else %>
-  <li id="link-to-login" class="border_dashed"><%= link_to t(:login), spree.login_path, :class=>"icon-user" %></li>
+  <li id="link-to-login"><%= link_to t(:login), spree.login_path, :class=>"icon-user" %></li>
 <% end %>

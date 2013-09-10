@@ -8,7 +8,9 @@
 /*  */
 
 body{
-  background: #EDF0E5;
+  background-color: #FFF;
+  background-image: url("/assets/fondo_colores.png");
+  background-repeat: repeat-x;
 }
 h1{
   font-size: 30px;
@@ -28,18 +30,20 @@ h2{
 /* Header
 ==========*/
 header{
-  padding-top: 20px;
+  padding-top: 30px;
   nav#collection-nav{
+    background: #b5c939;
     ul#main-nav-bar{
-      background: #8CBC00;
       padding-top: 7px;
       margin: 0;
       text-transform: none;
+      text-align: right;
+      color: #FFFFFF;
       li a{
         color: #FFFFFF;
         padding: 10px;
-        font-family: 'Chewy', Arial, serif;
-        font-size: 20px;
+        font-family: 'Comic Sans MS';
+        font-size: 16px;
         font-weight: normal;
       }
     }
@@ -49,9 +53,9 @@ header{
       color: #666;
     }
     .cart-info{
-      background-image: url("/assets/cart3.png");
+      background-image: url("/assets/green-cart.png");
       background-repeat: no-repeat;
-      padding-left: 25px;
+      padding: 5px 0 10px 43px;
       .amount{
         padding-left: 10px;
       }
@@ -61,9 +65,9 @@ header{
     a{
       color: #666;
       &.icon-user{
-        background-image: url("/assets/user3.png");
+        background-image: url("/assets/green-user.png");
         background-repeat: no-repeat;
-        padding-left: 25px;
+        padding: 5px 0 10px 38px;
       }
     }
   }
