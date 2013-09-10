@@ -91,16 +91,21 @@ header{
 ==========*/
 footer#footer{
   //background: #FE642E; // Naranja oscuro
-  background: #8CBC00; // Verde claro
-  margin-bottom: 20px;
+  //background: #8CBC00; // Verde claro
+  background-image: url("/assets/fondo-footer.png");
+  background-repeat: no-repeat;
+  margin-bottom: 0;
   padding-bottom: 0;
+  padding-top: 215px;
+  font-family: 'Comic Sans MS';
+  font-size: 13px;
+
   #footer-left span{ padding-left : 10px; }
   #footer-right nav{ padding-right: 10px; float: right;}
   a{
     color: #FFF;
     font-weight: bold;
-    font-family: 'Chewy', Arial, serif;;
-    font-size: 16px;
+    font-family: 'Comic Sans MS';
     font-weight: normal;
   }
   #footer-pages{
