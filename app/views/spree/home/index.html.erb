@@ -18,7 +18,7 @@
         end
       %>
         <div class="one-third column <%= position %>">
-          <h2 class="<%= colors_array[i] %>"><%= taxon.try(:name) %>       </h2>
+          <h2 class="<%= colors_array[i] %>"><%= line_break(taxon.try(:name)) %>       </h2>
           <div class="home_category_description">
             <%= taxon.try(:description) %>
           </div>
@@ -36,8 +36,10 @@
   <% end %>
 </div>
 
+<div class="container linea">&nbsp;</div>
+
 <div data-hook="homepage_prominent_products">
-  <h2>Productos Destacados</h2>
+  <h2 class="green">Productos Destacados</h2>
   <%= render :partial => 'spree/shared/products_group_4', :locals => { :products => @products } %>
 </div>
 

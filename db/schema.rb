@@ -118,6 +118,18 @@ ActiveRecord::Schema.define(:version => 20130904013803) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "spree_contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "order_number"
+    t.text     "message"
+    t.integer  "spree_topic_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "spree_contacts", ["spree_topic_id"], :name => "index_spree_contacts_on_spree_topic_id"
+
   create_table "spree_countries", :force => true do |t|
     t.string  "iso_name"
     t.string  "iso"
@@ -595,6 +607,14 @@ ActiveRecord::Schema.define(:version => 20130904013803) do
   end
 
   add_index "spree_tokenized_permissions", ["permissable_id", "permissable_type"], :name => "index_tokenized_name_and_type"
+
+  create_table "spree_topics", :force => true do |t|
+    t.string   "title"
+    t.string   "email"
+    t.boolean  "active"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "spree_trackers", :force => true do |t|
     t.string   "environment"

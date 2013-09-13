@@ -5,7 +5,7 @@
   border-radius: $val $val $val $val;
 }
 
-$green  : #aabd2e;
+$green  : #ACC948; //#aabd2e
 $sky    : #599edf;
 $orange : #d79a24;
 
@@ -24,7 +24,7 @@ h1{
   margin: 20px 0;
 }
 h2{
-  font-size: 30px;
+  font-size: 26px;
   color: #009966;
   font-family: 'Pacifico', cursive;
   font-weight: normal;
@@ -78,7 +78,7 @@ header{
   #search-bar{
     padding-top: 20px;
     #keywords{
-      border: 2px #BDBDBD solid;
+      border: 2px #ACC948 solid;
       @include radius_all(8px);
     }
     form input[type="submit"]{
@@ -96,12 +96,14 @@ header{
 footer#footer{
   //background: #FE642E; // Naranja oscuro
   //background: #8CBC00; // Verde claro
-  background-image: url("/assets/fondo-footer.png");
+  background-image: url("/assets/fondo_pie.png");
   background-repeat: no-repeat;
   margin-bottom: 0;
   padding-bottom: 0;
   padding-top: 215px;
   font-size: 13px;
+  background-size: cover;
+  border-top: 0px;
 
   #footer-left span{ padding-left : 10px; }
   #footer-right nav{ padding-right: 10px; float: right;}
@@ -134,8 +136,10 @@ footer#footer{
 
 div[data-hook="homepage_categories"]{
   h2{
+    font-size: 26px;
+    // color: #00A1DC;
     padding: 0 10px;
-    min-height: 65px;
+    min-height: 60px;
   }
   .pull-left{
     display: block;
@@ -226,3 +230,19 @@ ul#products li{
 .sky    { color: $sky; }
 .green  { color: $green; }
 .orange { color: $orange; }
+
+
+/** Editando pie de pagina
+==========================*/
+
+.logoinnova {
+  margin: -52px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.linea {
+  background-image: url("/assets/linea.gif");
+  background-position: 50% 0px;
+  background-repeat: repeat no-repeat;
+  width: 100%;
+}
