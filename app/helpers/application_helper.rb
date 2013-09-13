@@ -17,4 +17,8 @@ module ApplicationHelper
     link_to text, spree.cart_path, :class => "cart-info #{css_class}"
   end
 
+  def colors_array
+    ["sky", "green", "orange"]
+  end
+
 end

@@ -4,12 +4,11 @@
 
 <div data-hook="homepage_categories" class="container row">
   <% if @first_taxonomy.present? %>
-    <% all_taxons   = @first_taxonomy.taxons - [@first_taxonomy.taxons.root]
-      first_taxon   = all_taxons.first
-      last_taxon    = all_taxons.last
+    <% first_taxon   = @all_taxons.first
+      last_taxon    = @all_taxons.last
     %>
-    <% all_taxons.each_slice(3) do |taxon_group| %>
-      <% taxon_group.each do |taxon|
+    <% @all_taxons.each_slice(3) do |taxon_group| %>
+      <% taxon_group.each_with_index do |taxon, i|
         if first_taxon    == taxon
           position = "alpha"
         elsif last_taxon  == taxon
@@ -19,12 +18,17 @@
         end
       %>
         <div class="one-third column <%= position %>">
-          <div class="home_category_icon">
-            <%= link_to (taxon.icon.present? ? image_tag(taxon.icon.url(:taxon)) : nil) , seo_url(taxon) %>
-          </div>
-          <h2><%= taxon.try(:name) %>       </h2>
+          <h2 class="<%= colors_array[i] %>"><%= taxon.try(:name) %>       </h2>
           <div class="home_category_description">
             <%= taxon.try(:description) %>
+          </div>
+          <div class="home_category_products">
+            <% taxon.products.limit(3).each do |p_product, p_i| %>
+              <% p_position = ("alpha" if p_i==0) || ("omega" if p_i==2) || "" %>
+              <div class="one-third column <%= p_position %>">
+                <h3><%= p_product.try(:name) %><h3>
+              </div>
+            <% end %>
           </div>
         </div>
       <% end %>
