@@ -6,6 +6,7 @@
 <!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
   <head data-hook="inside_head">
     <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <%= render :partial => 'spree/shared/head' %>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
@@ -17,6 +18,12 @@
       <%= flash_messages %>
 
       <%= yield :slide %>
+
+    </div>
+
+    <div class="container linea">&nbsp;</div>
+
+    <div class="container">
 
       <div id="wrapper" class="row" data-hook>
 
@@ -30,9 +37,9 @@
 
       </div>
 
-      <%= render :partial => 'spree/shared/footer' %>
 
     </div>
+      <%= render :partial => 'spree/shared/footer' %>
 
     <%= render :partial => 'spree/shared/google_analytics' %>
   </body>
