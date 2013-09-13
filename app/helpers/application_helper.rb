@@ -21,4 +21,11 @@ module ApplicationHelper
     ["sky", "green", "orange"]
   end
 
+  def line_break(line)
+    l1 = line.split[0..1].join(" ")
+    l2 = (line.split - l1.split).join(" ")
+    line_print = l1 + "<br/>" + l2
+    line_print.html_safe
+  end
+
 end

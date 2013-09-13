@@ -36,12 +36,12 @@
   <% end %>
 </div>
 
-<div class="container linea">&nbsp;</div>
-
-<div data-hook="homepage_prominent_products">
-  <h2 class="green">Productos Destacados</h2>
-  <%= render :partial => 'spree/shared/products_group_4', :locals => { :products => @products } %>
-</div>
+<% content_for :post_wrapper do %>
+  <div data-hook="homepage_prominent_products">
+    <h2 class="green">Productos Destacados</h2>
+    <%= render :partial => 'spree/shared/products_group_4', :locals => { :products => @products } %>
+  </div>
+<% end %>
 
 <div data-hook="homepage_products">
   <%# <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %> %>
