@@ -8,6 +8,7 @@
 $green  : #ACC948; //#aabd2e
 $sky    : #599edf;
 $orange : #d79a24;
+$smoke  : #888888;
 
 /*  */
 
@@ -165,8 +166,23 @@ div[data-hook="homepage_categories"]{
       &:last-child{
         margin: 0;
       }
-      img{
-        max-width: 100%;
+      .home_category_product_image{
+        min-height: 100px;
+        img{
+          max-width: 100%;
+          vertical-align: middle;
+        }
+      }
+      p{
+        text-align: center;
+        padding: 2px 0;
+      }
+      .price{
+        font-size: 12px;
+        width: 55%;
+        color: $smoke;
+        float: left;
+        display: block;
       }
     }
   }
@@ -230,7 +246,12 @@ ul#products li{
 .sky    { color: $sky; }
 .green  { color: $green; }
 .orange { color: $orange; }
-
+.white  { color: white; }
+.smoke  { color: $smoke; }
+.bg_sky   { background-color: $sky; }
+.bg_green { background-color: $green; }
+.bg_orange{ background-color: $orange; }
+.bg_white { background-color: white; }
 
 /** Editando pie de pagina
 ==========================*/

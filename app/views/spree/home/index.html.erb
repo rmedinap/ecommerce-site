@@ -24,9 +24,12 @@
           </div>
           <div class="home_category_products">
             <% taxon.products.limit(3).each do |p_product, p_i| %>
-              <% p_position = ("alpha" if p_i==0) || ("omega" if p_i==2) || "" %>
-              <div class="one-third column <%= p_position %>">
-                <h3><%= p_product.try(:name) %><h3>
+              <div class="home_category_product">
+                <div class="home_category_product_image"><%= link_to small_image(p_product, :itemprop => "image"), p_product, :itemprop => 'url' %></div>
+                <p class="bg_<%= colors_array[i] %> white"><%= p_product.try(:name) %></p>
+                <span class="price smoke" itemprop="price"><%= display_price(p_product) %></span>
+                <span class="smoke">|&nbsp;</span>
+                <span><%= image_tag "cart3.png"%></span>
               </div>
             <% end %>
           </div>
