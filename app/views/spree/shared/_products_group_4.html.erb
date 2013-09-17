@@ -12,12 +12,16 @@
 <ul id="products" class="inline product-listing" data-hook>
   <% products.each do |product| %>
     <% if product.on_display? %>
-      <li id="product_<%= product.id %>" class="columns four <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+      <li id="product_<%= product.id %>" class="columns four home_product_list <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
         <div class="product-image">
           <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
         </div>
         <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
-        <span class="price selling" itemprop="price"><%= display_price(product) %></span>
+        <div>
+          <span class="price selling pull-left" itemprop="price"><%= display_price(product) %></span>
+          <span class="smoke pull-left cart_icon"><%= image_tag "cart3.png"%></span>
+          <span class="smoke pull-left ver_mas"><%= link_to "Ver más...", product, :class=>"bg_green white" %></span>
+        </div>
       </li>
     <% end %>
   <% end %>
