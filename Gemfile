@@ -53,3 +53,5 @@ gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content
 gem 'spree_contact_form'
 
 gem 'spree_two_checkout', :git => "git://github.com/craigchristenson/Spree-2Checkout.git"
+
+gem 'spree_videos', :git => "git://github.com/iloveitaly/Spree-Videos.git"

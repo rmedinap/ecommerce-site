@@ -14,3 +14,4 @@
 //= require store/spree_social
 //= require store/spree_product_zoom
 //= require store/jquery.bxslider.min
+//= require store/spree_videos
