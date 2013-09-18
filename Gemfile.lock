@@ -33,6 +33,16 @@ GIT
       spree_core (~> 1.0)
 
 GIT
+  remote: git://github.com/spree/spree_i18n.git
+  revision: 752eb67204e9c5a4e22b62591a8fd55fe2285e43
+  branch: 1-3-stable
+  specs:
+    spree_i18n (1.0.0)
+      i18n (~> 0.5)
+      rails-i18n
+      spree_core (>= 1.1)
+
+GIT
   remote: git://github.com/spree/spree_product_zoom.git
   revision: be2d9aa8cffe05775f08961607842ddb3407e9d6
   branch: 1-3-stable
@@ -269,6 +279,8 @@ GEM
       activesupport (= 3.2.14)
       bundler (~> 1.0)
       railties (= 3.2.14)
+    rails-i18n (0.7.4)
+      i18n (~> 0.5)
     railties (3.2.14)
       actionpack (= 3.2.14)
       activesupport (= 3.2.14)
@@ -402,6 +414,7 @@ DEPENDENCIES
   spree_auth_devise!
   spree_contact_form
   spree_gateway!
+  spree_i18n!
   spree_product_zoom!
   spree_slider
   spree_social!
