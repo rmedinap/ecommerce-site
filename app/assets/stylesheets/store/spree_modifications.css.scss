@@ -306,3 +306,14 @@ ul#products li{
   background-repeat: repeat no-repeat;
   width: 100%;
 }
+
+
+/** Titulo de producto interno en verde y sin linea inferior
+==========================================================*/
+
+#product-description .product-title {
+color: #ACC948;
+margin-bottom: 15px;
+font-size: 24px;
+border: 0;
+}
