@@ -57,3 +57,5 @@ gem 'spree_two_checkout', :git => "git://github.com/craigchristenson/Spree-2Chec
 gem 'spree_videos', :git => "git://github.com/iloveitaly/Spree-Videos.git"
 
 gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '1-3-stable'
+
+gem 'newrelic_rpm'
