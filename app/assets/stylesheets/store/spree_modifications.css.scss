@@ -16,7 +16,7 @@
 
 $green  : #ACC948; //#aabd2e
 $sky    : #599edf;
-$orange : #d79a24;
+$orange : #F49433;
 $smoke  : #888888;
 
 /*  */
@@ -305,4 +305,15 @@ ul#products li{
   background-position: 50% 0px;
   background-repeat: repeat no-repeat;
   width: 100%;
+}
+
+
+/** Titulo de producto interno en verde y sin linea inferior
+==========================================================*/
+
+#product-description .product-title {
+color: #ACC948;
+margin-bottom: 15px;
+font-size: 24px;
+border: 0;
 }
