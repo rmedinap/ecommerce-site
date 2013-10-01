@@ -25,17 +25,17 @@ body{
   background-color: #FFF;
   background-image: url("/assets/fondo_colores.png");
   background-repeat: repeat-x;
-  font-family: 'Comic Sans MS';
+  font-family: 'helvetica_neueregular', helvetica;
 }
 h1{
   font-size: 30px;
-  color: #009966;
+  color: $green;
   font-family: 'Pacifico', cursive;
   margin: 20px 0;
 }
 h2{
   font-size: 26px;
-  color: #009966;
+  color: $green;
   font-family: 'Pacifico', cursive;
   font-weight: normal;
   margin: 20px 0;
