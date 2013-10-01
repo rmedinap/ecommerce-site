@@ -58,4 +58,6 @@ gem 'spree_videos', :git => "git://github.com/iloveitaly/Spree-Videos.git"
 
 gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '1-3-stable'
 
+gem 'spree_blogging_spree', :github => 'stefansenk/spree-blogging-spree', :branch => '1-3-stable'
+
 gem 'newrelic_rpm'
