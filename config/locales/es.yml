@@ -15,8 +15,11 @@ es:
   position: "Posicion"
   create: "Crear"
   slide: "Slide"
-  next: "Siguiente"
-  last: "Ultimo"
+  pagination:
+    next: "Siguiente"
+    last: "Ultimo"
+    first: "Primero"
+    previous: "Previo"
   back: "Atras"
   or: "o"
   image_file_name: "Nombre del archivo"
