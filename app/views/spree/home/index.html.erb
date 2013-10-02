@@ -19,17 +19,13 @@
       %>
         <div class="one-third column <%= position %>">
           <h2 class="<%= colors_array[i] %>"><%= line_break(taxon.try(:name)) %>       </h2>
-          <div class="home_category_description">
-            <%= taxon.try(:description) %>
-          </div>
+
           <div class="home_category_products">
             <% taxon.products.limit(3).each do |p_product, p_i| %>
               <div class="home_category_product">
                 <div class="home_category_product_image"><%= link_to small_image(p_product, :itemprop => "image"), p_product, :itemprop => 'url' %></div>
                 <p class="bg_<%= colors_array[i] %> white"><%= p_product.try(:name) %></p>
-                <span class="price smoke" itemprop="price"><%= display_price(p_product) %></span>
-                <span class="smoke">|&nbsp;</span>
-                <span><%= image_tag "cart3.png"%></span>
+
               </div>
             <% end %>
           </div>

@@ -75,6 +75,19 @@ header{
       }
     }
   }
+  #link-to-facebook{
+    a{
+      color: #666;
+    }
+    .facebook-info{
+      background-image: url("/assets/icon_face.png");
+      background-repeat: no-repeat;
+      padding: 5px 0 10px 43px;
+      .amount{
+        padding-left: 10px;
+      }
+    }
+  }
   #link-to-login{
     a{
       color: #666;
@@ -278,9 +291,9 @@ ul#products li{
 .orange { color: $orange; }
 .white  { color: white; }
 .smoke  { color: $smoke; }
-.bg_sky   { background-color: $sky; }
-.bg_green { background-color: $green; }
-.bg_orange{ background-color: $orange; }
+.bg_sky   { background-color: $sky; height:40px }
+.bg_green { background-color: $green; height:40px }
+.bg_orange{ background-color: $orange; height:40px }
 .bg_white { background-color: white; }
 
 .pull-left{
