@@ -15,24 +15,26 @@ es:
   position: "Posicion"
   create: "Crear"
   slide: "Slide"
-  pagination:
-    next: "Siguiente"
-    last: "Ultimo"
-    first: "Primero"
-    previous: "Previo"
   back: "Atras"
   or: "o"
   image_file_name: "Nombre del archivo"
+
+  views:
+    pagination:
+      next: "Siguiente"
+      last: "Ultimo"
+      first: "Primero"
+      previous: "Previo"
 
   date:
     abbr_day_names:
     - dom
     - lun
     - mar
-    - miÃ©
+    - mie
     - jue
     - vie
-    - sÃ¡b
+    - sab
     abbr_month_names:
     -
     - ene
@@ -51,10 +53,10 @@ es:
     - domingo
     - lunes
     - martes
-    - miÃ©rcoles
+    - miercoles
     - jueves
     - viernes
-    - sÃ¡bado
+    - sabado
     formats:
       default: ! '%d/%m/%Y'
       long: ! '%d de %B de %Y'
