@@ -1,0 +1,63 @@
+<% @body_id = 'contact_us' %>
+
+
+<div id="contact-us">
+  <h1><%= t("contact_us") %></h1>
+
+  <div data-hook='contact' class="columns ten alpha">
+    <%= render "spree/shared/error_messages", :target => @message %>
+		<br/>
+
+    <%= form_for(:message, :url => contact_path) do |f| %>
+
+      <div data-hook="contact_inside_form">
+        <div>
+          <%= f.label :topic_id, t("subject") %><br />
+          <%= f.collection_select :topic_id, @topics, :id, :name  %>
+        </div>
+        <br/>
+
+        <div>
+          <%= f.label :name, t("name") %><br />
+          <%= f.text_field :name  %>
+        </div>
+        <br/>
+
+        <div>
+          <%= f.label :email, t("email") %><br />
+          <%= f.text_field :email  %>
+        </div>
+        <br/>
+
+        <div>
+          <%= f.label :order_number, t(:order_number) %> (<%= t('optional') %>)<br />
+          <%= f.text_field :order_number  %>
+        </div>
+        <br/>
+
+        <div>
+          <%= f.label :message, t("message") %><br />
+          <%= f.text_area :message, :rows => 10  %>
+        </div>
+        <br/>
+
+        <p><%= submit_tag t("send_message"), :class => 'button primary' %></p>
+      </div>
+    <% end %>
+  </div>
+  <br/> <br/> <br/> <br/> <br/>
+  <div class="columns six omega">
+    <div class="border_dashed">
+      <table>
+        <tr>
+          <td>teléfono: </td>
+          <td>4332435</td>
+        </tr>
+        <tr>
+          <td>email: </td>
+          <td>pedidos@innovacd.com</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
