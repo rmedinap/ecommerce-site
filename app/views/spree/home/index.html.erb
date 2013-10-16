@@ -4,12 +4,11 @@
 
 <div data-hook="homepage_categories" class="container row">
   <% if @first_taxonomy.present? %>
-    <% all_taxons   = @first_taxonomy.taxons - [@first_taxonomy.taxons.root]
-      first_taxon   = all_taxons.first
-      last_taxon    = all_taxons.last
+    <% first_taxon   = @all_taxons.first
+      last_taxon    = @all_taxons.last
     %>
-    <% all_taxons.each_slice(3) do |taxon_group| %>
-      <% taxon_group.each do |taxon|
+    <% @all_taxons.each_slice(3) do |taxon_group| %>
+      <% taxon_group.each_with_index do |taxon, i|
         if first_taxon    == taxon
           position = "alpha"
         elsif last_taxon  == taxon
@@ -19,12 +18,16 @@
         end
       %>
         <div class="one-third column <%= position %>">
-          <div class="home_category_icon">
-            <%= link_to (taxon.icon.present? ? image_tag(taxon.icon.url(:taxon)) : nil) , seo_url(taxon) %>
-          </div>
-          <h2><%= taxon.try(:name) %>       </h2>
-          <div class="home_category_description">
-            <%= taxon.try(:description) %>
+          <h2 class="<%= colors_array[i] %>"><%= line_break(taxon.try(:name)) %>       </h2>
+
+          <div class="home_category_products">
+            <% taxon.products.limit(3).each do |p_product, p_i| %>
+              <div class="home_category_product">
+                <div class="home_category_product_image"><%= link_to small_image(p_product, :itemprop => "image"), p_product, :itemprop => 'url' %></div>
+                <p class="bg_<%= colors_array[i] %> white"><%= p_product.try(:name) %></p>
+
+              </div>
+            <% end %>
           </div>
         </div>
       <% end %>
@@ -32,10 +35,12 @@
   <% end %>
 </div>
 
-<div data-hook="homepage_prominent_products">
-  <h2>Productos Destacados</h2>
-  <%= render :partial => 'spree/shared/products_group_4', :locals => { :products => @products } %>
-</div>
+<% content_for :post_wrapper do %>
+  <div data-hook="homepage_prominent_products">
+    <h2 class="green">Productos Destacados</h2>
+    <%= render :partial => 'spree/shared/products_group_4', :locals => { :products => @products } %>
+  </div>
+<% end %>
 
 <div data-hook="homepage_products">
   <%# <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %> %>

@@ -1,4 +1,18 @@
 GIT
+  remote: git://github.com/craigchristenson/Spree-2Checkout.git
+  revision: 72ab18fb329c81a77b64b7b246d1b6eef334e013
+  specs:
+    spree_two_checkout (0.3.1)
+
+GIT
+  remote: git://github.com/iloveitaly/Spree-Videos.git
+  revision: 1ea1cafb900e0f0ddfcc60d5e2a12b1775926905
+  specs:
+    spree_videos (1.3.0)
+      spree_core (~> 1.1)
+      youtube_it (~> 2.3.2)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: b2b82f1bbe4b47a0713bcf70af8b3c17fa39c0d0
   branch: 1-3-stable
@@ -17,6 +31,16 @@ GIT
     spree_gateway (1.2.0.rc2)
       savon (~> 1.2)
       spree_core (~> 1.0)
+
+GIT
+  remote: git://github.com/spree/spree_i18n.git
+  revision: 752eb67204e9c5a4e22b62591a8fd55fe2285e43
+  branch: 1-3-stable
+  specs:
+    spree_i18n (1.0.0)
+      i18n (~> 0.5)
+      rails-i18n
+      spree_core (>= 1.1)
 
 GIT
   remote: git://github.com/spree/spree_product_zoom.git
@@ -46,6 +70,15 @@ GIT
   branch: 1-3-stable
   specs:
     spree_static_content (1.3.0.beta)
+      spree_core (~> 1.3.0)
+
+GIT
+  remote: git://github.com/stefansenk/spree-blogging-spree.git
+  revision: 4d5c7ee8709694697a7ae6afa0b822f7049dfe63
+  branch: 1-3-stable
+  specs:
+    spree_blogging_spree (0.3.0)
+      acts-as-taggable-on (~> 2.3.1)
       spree_core (~> 1.3.0)
 
 GIT
@@ -97,7 +130,10 @@ GEM
     activesupport (3.2.14)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    acts-as-taggable-on (2.3.3)
+      rails (~> 3.0)
     acts_as_list (0.1.4)
+    addressable (2.3.5)
     akami (1.2.0)
       gyoku (>= 0.4.0)
       nokogiri (>= 1.4.0)
@@ -136,6 +172,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    crack (0.4.1)
+      safe_yaml (~> 0.9.0)
     deface (0.9.1)
       nokogiri (~> 1.5.0)
       rails (~> 3.1)
@@ -147,6 +185,7 @@ GEM
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
     erubis (2.7.0)
+    excon (0.25.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.8)
@@ -194,6 +233,7 @@ GEM
     net-ssh (2.6.8)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    newrelic_rpm (3.6.7.152)
     nokogiri (1.5.10)
     nori (1.1.5)
     oa-core (0.3.2)
@@ -251,6 +291,8 @@ GEM
       activesupport (= 3.2.14)
       bundler (~> 1.0)
       railties (= 3.2.14)
+    rails-i18n (0.7.4)
+      i18n (~> 0.5)
     railties (3.2.14)
       actionpack (= 3.2.14)
       activesupport (= 3.2.14)
@@ -266,6 +308,7 @@ GEM
       polyamorous (~> 0.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    safe_yaml (0.9.7)
     sass (3.2.10)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -281,6 +324,7 @@ GEM
       wasabi (~> 2.5.0)
     select2-rails (3.2.1)
       thor (~> 0.14)
+    simple_oauth (0.2.0)
     spree (1.3.3)
       spree_api (= 1.3.3)
       spree_cmd (= 1.3.3)
@@ -352,6 +396,19 @@ GEM
     wasabi (2.5.1)
       httpi (~> 1.0)
       nokogiri (>= 1.4.0)
+    webmock (1.13.0)
+      addressable (>= 2.2.7)
+      crack (>= 0.3.2)
+    youtube_it (2.3.2)
+      builder
+      excon
+      faraday (~> 0.8)
+      json (~> 1.8.0)
+      nokogiri (~> 1.5.2)
+      oauth (~> 0.4.4)
+      oauth2 (~> 0.6)
+      simple_oauth (>= 0.1.5)
+      webmock
 
 PLATFORMS
   ruby
@@ -363,16 +420,21 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails (~> 2.2.0)
   mysql2
+  newrelic_rpm
   rails (= 3.2.14)
   sass-rails (~> 3.2.3)
   spree (= 1.3.3)
   spree_auth_devise!
+  spree_blogging_spree!
   spree_contact_form
   spree_gateway!
+  spree_i18n!
   spree_product_zoom!
   spree_slider
   spree_social!
   spree_static_content!
+  spree_two_checkout!
+  spree_videos!
   spree_wysiwyg!
   uglifier (>= 1.0.3)
   unicorn

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130904013803) do
+ActiveRecord::Schema.define(:version => 20130930231851) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -94,6 +94,20 @@ ActiveRecord::Schema.define(:version => 20130904013803) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "spree_blog_entries", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "permalink"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.boolean  "visible",      :default => false
+    t.datetime "published_at"
+    t.text     "summary"
+    t.integer  "author_id"
+  end
+
+  add_index "spree_blog_entries", ["author_id"], :name => "index_spree_blog_entries_on_author_id"
+
   create_table "spree_calculators", :force => true do |t|
     t.string   "type"
     t.integer  "calculable_id"
@@ -117,6 +131,18 @@ ActiveRecord::Schema.define(:version => 20130904013803) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "spree_contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "order_number"
+    t.text     "message"
+    t.integer  "spree_topic_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "spree_contacts", ["spree_topic_id"], :name => "index_spree_contacts_on_spree_topic_id"
 
   create_table "spree_countries", :force => true do |t|
     t.string  "iso_name"
@@ -596,6 +622,14 @@ ActiveRecord::Schema.define(:version => 20130904013803) do
 
   add_index "spree_tokenized_permissions", ["permissable_id", "permissable_type"], :name => "index_tokenized_name_and_type"
 
+  create_table "spree_topics", :force => true do |t|
+    t.string   "title"
+    t.string   "email"
+    t.boolean  "active"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "spree_trackers", :force => true do |t|
     t.string   "environment"
     t.string   "analytics_id"
@@ -638,6 +672,10 @@ ActiveRecord::Schema.define(:version => 20130904013803) do
     t.datetime "updated_at",                                           :null => false
     t.string   "spree_api_key",          :limit => 48
     t.datetime "remember_created_at"
+    t.string   "nickname"
+    t.string   "website_url"
+    t.string   "google_plus_url"
+    t.text     "bio_info"
   end
 
   add_index "spree_users", ["email"], :name => "email_idx_unique", :unique => true
@@ -661,6 +699,15 @@ ActiveRecord::Schema.define(:version => 20130904013803) do
 
   add_index "spree_variants", ["product_id"], :name => "index_spree_variants_on_product_id"
 
+  create_table "spree_videos", :force => true do |t|
+    t.string   "youtube_ref"
+    t.integer  "position"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "watchable_id"
+    t.string   "watchable_type"
+  end
+
   create_table "spree_zone_members", :force => true do |t|
     t.integer  "zoneable_id"
     t.string   "zoneable_type"
@@ -676,6 +723,23 @@ ActiveRecord::Schema.define(:version => 20130904013803) do
     t.integer  "zone_members_count", :default => 0
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
+  end
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       :limit => 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
   end
 
 end

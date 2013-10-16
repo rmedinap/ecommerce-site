@@ -1,0 +1,23 @@
+#product-videos {
+
+    #video-player {
+        // player holder
+    }
+
+    #video-thumbnails {
+        // thumbnail holder
+
+        a {
+            // thumbnails 
+
+            display: block;
+            float: left;
+
+            &:hover { }
+
+            &:first-child { }
+
+            &:last-child { }
+        }
+    }
+}

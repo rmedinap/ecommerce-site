@@ -10,6 +10,7 @@ module Spree
       @products = @searcher.retrieve_products
       # La primera taxonomía determinará las categorías (tres columnas).
       @first_taxonomy = Spree::Taxonomy.first
+      @all_taxons = @first_taxonomy.taxons - [@first_taxonomy.taxons.root]
       respond_with(@products)
     end
   end
