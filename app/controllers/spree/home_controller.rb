@@ -8,6 +8,7 @@ module Spree
       @searcher.current_user = try_spree_current_user
       @searcher.current_currency = current_currency
       @products = @searcher.retrieve_products
+      @featured_products = Product.featured_products
       # La primera taxonomía determinará las categorías (tres columnas).
       @first_taxonomy = Spree::Taxonomy.first
       @all_taxons = @first_taxonomy.taxons - [@first_taxonomy.taxons.root]

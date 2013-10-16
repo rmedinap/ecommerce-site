@@ -2,7 +2,7 @@
     <%= render :partial => 'spree/shared/slider' %>
 <% end %>
 
-<div data-hook="homepage_categories" class="container row">
+<div data-hook="homepage_categories" class="">
   <% if @first_taxonomy.present? %>
     <% first_taxon   = @all_taxons.first
       last_taxon    = @all_taxons.last
@@ -38,7 +38,7 @@
 <% content_for :post_wrapper do %>
   <div data-hook="homepage_prominent_products">
     <h2 class="green">Productos Destacados</h2>
-    <%= render :partial => 'spree/shared/products_group_4', :locals => { :products => @products } %>
+    <%= render :partial => 'spree/shared/products_group_3', :locals => { :products => @featured_products } %>
   </div>
 <% end %>
 
