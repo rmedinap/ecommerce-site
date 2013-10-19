@@ -13,4 +13,4 @@ Spree.config do |config|
   config.logo = 'admin/bg/logo.png'
 end
 
-Spree.user_class = "Spree::LegacyUser"
+Spree.user_class = "Spree::User"
