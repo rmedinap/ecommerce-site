@@ -6,11 +6,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-
 //= require store/spree_core
 //= require store/spree_promo
-
-//= require_tree .
 //= require store/spree_social
 //= require store/spree_product_zoom
 //= require store/jquery.bxslider.min
+//= require_tree .
+
