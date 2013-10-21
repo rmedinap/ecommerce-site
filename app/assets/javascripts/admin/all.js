@@ -9,6 +9,6 @@
 //= require admin/spree_core
 //= require admin/spree_promo
 //= require admin/spree_social
-//= require admin/spree_wysiwyg
 //= require_tree .
 
+//= require admin/spree_editor
