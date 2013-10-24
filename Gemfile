@@ -62,3 +62,5 @@ gem 'newrelic_rpm'
 gem 'spree_editor', :github => "spree/spree_editor", :branch => '1-3-stable'
 gem 'tinymce-rails', '>= 3.4.7.0.1'
 gem 'ckeditor', '~> 4.0.2'
+
+gem 'spree_bank_transfer', :github => "mvjohn100/spree-bank-transfer"
