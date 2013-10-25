@@ -60,6 +60,12 @@ gem 'spree_blogging_spree', :github => 'stefansenk/spree-blogging-spree', :branc
 gem 'newrelic_rpm'
 
 gem 'spree_editor', :github => "spree/spree_editor", :branch => '1-3-stable'
+
+gem "youtube_it"
+
+gem "nokogiri", '~> 1.5.2'
+gem 'spree_videos', :git => 'git://github.com/iloveitaly/Spree-Videos.git', :branch => 'master'
+
 gem 'tinymce-rails', '>= 3.4.7.0.1'
 gem 'ckeditor', '~> 4.0.2'
 

@@ -13,3 +13,4 @@
 //= require store/jquery.bxslider.min
 //= require_tree .
 
+//= require store/spree_videos
