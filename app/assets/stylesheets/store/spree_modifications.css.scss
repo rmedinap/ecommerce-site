@@ -40,6 +40,7 @@ h2{
   font-family: 'Pacifico', cursive;
   font-weight: normal;
   margin: 20px 0;
+  text-align: center;
 }
 
 /* Header
@@ -159,7 +160,7 @@ footer#footer{
 
 nav#collection-nav{
   ul#main-nav-bar{
-    background: #8CBC00;
+    background: $green;
     padding-top: 7px;
     margin: 0;
     li a{
@@ -334,5 +335,28 @@ color: #ACC948;
 margin-bottom: 15px;
 font-size: 24px;
 border: 0;
+}
+
+/** Centrar titulo de producto en el home
+=========================================*/
+
+.area { 
+  width: 90px; 
+  height: 40px; 
+  background: url(../images/abe-bg.png) no-repeat; 
+  position: relative;
+}
+
+.bubble { 
+  position: absolute; 
+  width: 90px; 
+  height: 40px; 
+  display: table; 
+}
+
+.bubble p {
+  display: table-cell; 
+  vertical-align: middle; 
+  text-align: center; 
 }
 
