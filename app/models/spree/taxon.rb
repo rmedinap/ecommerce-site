@@ -72,4 +72,8 @@ class Spree::Taxon < ActiveRecord::Base
     ancestor_chain + "#{name}"
   end
 
+  def featured_products
+    self.products.category_featured_products
+  end
+
 end

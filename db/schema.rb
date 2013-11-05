@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131024025024) do
+ActiveRecord::Schema.define(:version => 20131105185958) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -140,18 +140,6 @@ ActiveRecord::Schema.define(:version => 20131024025024) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  create_table "spree_contacts", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "order_number"
-    t.text     "message"
-    t.integer  "spree_topic_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-  end
-
-  add_index "spree_contacts", ["spree_topic_id"], :name => "index_spree_contacts_on_spree_topic_id"
 
   create_table "spree_countries", :force => true do |t|
     t.string  "iso_name"
@@ -400,6 +388,7 @@ ActiveRecord::Schema.define(:version => 20131024025024) do
     t.datetime "updated_at",                              :null => false
     t.boolean  "on_demand",            :default => false
     t.boolean  "featured",             :default => false, :null => false
+    t.boolean  "category_featured",    :default => false, :null => false
   end
 
   add_index "spree_products", ["available_on"], :name => "index_spree_products_on_available_on"
@@ -632,14 +621,6 @@ ActiveRecord::Schema.define(:version => 20131024025024) do
   end
 
   add_index "spree_tokenized_permissions", ["permissable_id", "permissable_type"], :name => "index_tokenized_name_and_type"
-
-  create_table "spree_topics", :force => true do |t|
-    t.string   "title"
-    t.string   "email"
-    t.boolean  "active"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
   create_table "spree_trackers", :force => true do |t|
     t.string   "environment"
