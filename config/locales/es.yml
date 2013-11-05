@@ -1,6 +1,6 @@
 es:
-  please_make_your_payment_by_using_bank_transfer_to_one_of_the_following_banks: "Por favor, haga un depósito al nro. de cuenta del BCP indicando el número de pedido y el escaneado del voucher o el número de operación a pedidos@innovacd.com ."
-  please_continue_to_the_payment_confirmation_page_once_you_ve_made_your_payment: "Cualquier consulta, no dude en llamarnos al (01) 4332435."
+  please_make_your_payment_by_using_bank_transfer_to_one_of_the_following_banks: "Por favor, haga un depósito al nro. de cuenta del BCP indicando el número de pedido y el escaneado del voucher o el número de operación a <a href='mailto:pedidos@innovacd.com'>pedidos@innovacd.com</a> "
+  please_continue_to_the_payment_confirmation_page_once_you_ve_made_your_payment: "Cualquier consulta, no dude en llamarnos al (01) 4332435"
   bank_name: "Banco"
   bank_branch: "Agencia"
   account_owner: "Titular"
