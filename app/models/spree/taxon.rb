@@ -31,8 +31,8 @@ class Spree::Taxon < ActiveRecord::Base
     # fs << ProductFilters.taxons_below(self)
     ## unless it's a root taxon? left open for demo purposes
 
-    fs << Spree::ProductFilters.price_filter if Spree::ProductFilters.respond_to?(:price_filter)
-    fs << Spree::ProductFilters.brand_filter if Spree::ProductFilters.respond_to?(:brand_filter)
+    #fs << Spree::ProductFilters.price_filter if Spree::ProductFilters.respond_to?(:price_filter)
+    #fs << Spree::ProductFilters.brand_filter if Spree::ProductFilters.respond_to?(:brand_filter)
     fs
   end
 
